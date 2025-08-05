@@ -1,197 +1,98 @@
-# Zypser NestJS Application
+<p align="center">
+  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
+</p>
 
-A modern, scalable backend application built with NestJS framework.
+[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
+[circleci-url]: https://circleci.com/gh/nestjs/nest
 
-## 🚀 Features
+  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
+    <p align="center">
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
+<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
+<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
+<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
+<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
+  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
+    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
+  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
+</p>
+  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
+  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-- **NestJS Framework**: Built with TypeScript and follows NestJS best practices
-- **Modular Architecture**: Clean, maintainable code structure
-- **TypeScript**: Full TypeScript support for better development experience
-- **RESTful APIs**: RESTful API design with proper HTTP status codes
-- **Database Integration**: Ready for database integration (PostgreSQL, MongoDB, etc.)
-- **Authentication**: JWT-based authentication system
-- **Validation**: Request validation using class-validator
-- **Testing**: Unit and e2e testing setup
-- **Documentation**: API documentation with Swagger/OpenAPI
+## Description
 
-## 📋 Prerequisites
+[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-Before running this application, make sure you have the following installed:
+## Project setup
 
-- **Node.js** (v18 or higher)
-- **npm** or **yarn** package manager
-- **Git**
-
-## 🛠️ Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd zypser_nest
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
-
-3. **Environment Setup**
-   ```bash
-   cp .env.example .env
-   # Edit .env file with your configuration
-   ```
-
-4. **Database Setup** (if applicable)
-   ```bash
-   # Set up your database connection
-   # Update database configuration in .env file
-   ```
-
-## 🏃‍♂️ Running the Application
-
-### Development Mode
 ```bash
-npm run start:dev
-# or
-yarn start:dev
+$ npm install
 ```
 
-### Production Mode
+## Compile and run the project
+
 ```bash
-npm run build
-npm run start:prod
-# or
-yarn build
-yarn start:prod
+# development
+$ npm run start
+
+# watch mode
+$ npm run start:dev
+
+# production mode
+$ npm run start:prod
 ```
 
-### Debug Mode
+## Run tests
+
 ```bash
-npm run start:debug
-# or
-yarn start:debug
+# unit tests
+$ npm run test
+
+# e2e tests
+$ npm run test:e2e
+
+# test coverage
+$ npm run test:cov
 ```
 
-## 🧪 Testing
+## Deployment
 
-### Unit Tests
+When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+
+If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+
 ```bash
-npm run test
-# or
-yarn test
+$ npm install -g @nestjs/mau
+$ mau deploy
 ```
 
-### E2E Tests
-```bash
-npm run test:e2e
-# or
-yarn test:e2e
-```
+With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
 
-### Test Coverage
-```bash
-npm run test:cov
-# or
-yarn test:cov
-```
+## Resources
 
-## 📚 API Documentation
+Check out a few resources that may come in handy when working with NestJS:
 
-Once the application is running, you can access the API documentation at:
+- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
+- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
+- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
+- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
+- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
+- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
+- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
+- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
 
-- **Swagger UI**: `http://localhost:3000/api`
-- **OpenAPI JSON**: `http://localhost:3000/api-json`
+## Support
 
-## 🏗️ Project Structure
+Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
-```
-src/
-├── app.controller.ts          # Main application controller
-├── app.service.ts            # Main application service
-├── app.module.ts             # Root application module
-├── main.ts                   # Application entry point
-├── modules/                  # Feature modules
-│   ├── auth/                # Authentication module
-│   ├── users/               # Users module
-│   └── ...
-├── common/                   # Shared utilities
-│   ├── decorators/          # Custom decorators
-│   ├── filters/             # Exception filters
-│   ├── guards/              # Guards
-│   ├── interceptors/        # Interceptors
-│   └── pipes/               # Pipes
-├── config/                   # Configuration files
-└── database/                 # Database related files
-    ├── entities/            # Database entities
-    ├── migrations/          # Database migrations
-    └── seeds/               # Database seeds
-```
+## Stay in touch
 
-## 🔧 Configuration
+- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
+- Website - [https://nestjs.com](https://nestjs.com/)
+- Twitter - [@nestframework](https://twitter.com/nestframework)
 
-The application uses environment variables for configuration. Create a `.env` file in the root directory with the following variables:
+## License
 
-```env
-# Application
-NODE_ENV=development
-PORT=3000
-
-# Database
-DATABASE_URL=postgresql://username:password@localhost:5432/zypser_db
-
-# JWT
-JWT_SECRET=your-jwt-secret
-JWT_EXPIRES_IN=1d
-
-# Redis (if using)
-REDIS_URL=redis://localhost:6379
-
-# External APIs
-API_KEY=your-api-key
-```
-
-## 🚀 Deployment
-
-### Docker Deployment
-```bash
-# Build Docker image
-docker build -t zypser-nest .
-
-# Run Docker container
-docker run -p 3000:3000 zypser-nest
-```
-
-### Environment Variables for Production
-Make sure to set appropriate environment variables for production deployment.
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🆘 Support
-
-If you encounter any issues or have questions:
-
-1. Check the [Issues](https://github.com/your-repo/issues) page
-2. Create a new issue with detailed description
-3. Contact the development team
-
-## 🔄 Version History
-
-- **v1.0.0** - Initial release
-- **v1.1.0** - Added authentication features
-- **v1.2.0** - Enhanced API documentation
-
----
-
-**Built with ❤️ using NestJS** 
+Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
