@@ -1,4 +1,4 @@
 export const DB_TABLES = {
-    TRADIE: 'tradie',
+    TRADIE: 'tradies',
     OTP: 'otp',
 }
