@@ -1,4 +1,4 @@
-import { Inject, Injectable } from "@nestjs/common";
+import { Inject, Injectable, BadRequestException } from "@nestjs/common";
 import { Model } from "mongoose";
 import { DB_PROVIDERS_INJECTION_TOKENS } from "src/constants/db.constants";
 import { OtpDocument } from "src/schemas/otpSchema.schema";
@@ -13,22 +13,6 @@ export class AuthService {
         private otpModel: Model<OtpDocument>,
     ) { }
 
-
-    async signUp(signUpDto: { email: string, password: string }) {
-        let isOtpValid = false;
-        const { email, password } = signUpDto;
-        const ExistingOtp = await this.otpModel.findOne({ email });
-        if (ExistingOtp) {
-            await this.otpModel.deleteMany({ email: ExistingOtp.email });
-            isOtpValid = true;
-        }
-        if (isOtpValid) {
-            const tradie = await this.tradieModel.create({ email, password });
-            return tradie;
-        }
-
-    }
-
-
-
+    // Note: User registration is now handled by the OTP service
+    // when OTP is verified, the user is automatically created
 }
