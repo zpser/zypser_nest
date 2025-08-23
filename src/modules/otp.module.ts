@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { JwtModule } from '@nestjs/jwt';
-import { ConfigModule, ConfigService } from '@nestjs/config';
+import { ConfigModule } from '@nestjs/config';
 import { Otp, OtpSchema } from '../schemas/otpSchema.schema';
 import { OtpService } from '../services/otp.service';
 import { SendVerificationEmailService } from '../services/verification.service';
@@ -14,13 +14,9 @@ import { databaseProvider } from '../provider/database.provider';
         MongooseModule.forFeature([
             { name: Otp.name, schema: OtpSchema }
         ]),
-        JwtModule.registerAsync({
-            imports: [ConfigModule],
-            useFactory: async (configService: ConfigService) => ({
-                secret: configService.get<string>('JWT_SECRET') || 'your-secret-key',
-                signOptions: { expiresIn: '1h' },
-            }),
-            inject: [ConfigService],
+        JwtModule.register({
+            secret: process.env.JWT_SECRET || 'your-secret-key',
+            signOptions: { expiresIn: '1h' },
         }),
     ],
     controllers: [OtpController],
