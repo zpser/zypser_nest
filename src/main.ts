@@ -3,13 +3,16 @@ import { AppModule } from './modules/app.module';
 import { SwaggerModule } from '@nestjs/swagger';
 import { swaggerConfig } from './config/swagger.config';
 import { ConfigService } from '@nestjs/config';
-import { Logger } from '@nestjs/common';
+import { Logger, ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {
   const configService = new ConfigService();
   const port = configService.get<number>('PORT') ?? 3000;
 
   const app = await NestFactory.create(AppModule);
+
+  // Enable validation
+  app.useGlobalPipes(new ValidationPipe());
 
   // Enable CORS
   app.enableCors({
